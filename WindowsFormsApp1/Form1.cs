@@ -20,11 +20,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             //takes the input form the input box.
@@ -76,9 +71,16 @@ namespace WindowsFormsApp1
             return false;
         }
 
-        //this function recursivly finds xmod N. It keeps the bit size down of the calculations by dividing repeatedly multiplying by x modulo N
+        //this function recursivly finds xmod N. 
+        //It keeps the bit size down of the calculations
+        //by dividing repeatedly multiplying by x modulo N
+
         //this is O(n^3)
-        //we calculate this big O by letting n be the size in bits x, y, and N as with multiplication. This function will halt after at most n recursive calls, and druing each call it multiplies n-bit numbers, for a total runtime of O(n^3).
+        //we calculate this big O by letting n be the size in bits x, y, 
+        //and N as with multiplication. 
+        //This function will halt after at most n recursive calls, 
+        //and druing each call it multiplies n-bit numbers, 
+        //for a total runtime of O(n^3).
         private long modular_exponentiation(long x, long y, long n)
         {
             //check if we met our base case of y = 0
